@@ -8,5 +8,6 @@
 </head>
 <body>
 ok
+<%response.sendRedirect("/model2Board/board/list"); %>
 </body>
 </html>

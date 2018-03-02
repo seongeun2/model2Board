@@ -14,7 +14,7 @@
 <c:if test="${chk == 1}">
 
 <meta http-equiv = "Refresh"
-content ="0;url=list.jsp?pageNum=${pageNum}">
+content ="0;url=list?pageNum=${pageNum}">
 </c:if>
 
 <c:if test="${chk != 1}">
