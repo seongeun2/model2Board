@@ -86,8 +86,8 @@ public void insertArticle(BoardDataBean article) {
 			
 			//새글쓰기
 			sql = "insert into board(num,writer,email,subject,passwd,reg_date,";
-			sql += "ref,re_step,re_level,content,ip,boardid) "
-				+ "values(?,?,?,?,?,sysdate,?,?,?,?,?, ?)";
+			sql += "ref,re_step,re_level,content,ip,boardid, filename, filesize) "
+				+ "values(?,?,?,?,?,sysdate,?,?,?,?,?,?,?,?)";
 			
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, number);
@@ -101,6 +101,8 @@ public void insertArticle(BoardDataBean article) {
 			pstmt.setString(9, article.getContent());
 			pstmt.setString(10, article.getIp());
 			pstmt.setString(11, article.getBoardid());
+			pstmt.setString(12, article.getFilename());
+			pstmt.setInt(13, article.getFilesize());
 			pstmt.executeQuery();
 			
 			}catch(SQLException ex){

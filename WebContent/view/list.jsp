@@ -14,7 +14,7 @@
 <span class="w3-center w3-large">
 	<h3>${boardid}(전체글:${count})</h3>
 </span>
-<p class="w3-right w3-padding-right-large"><a href="writeForm">글쓰기</a></p>
+<p class="w3-right w3-padding-right-large"><a href="writeFormUpload">글쓰기</a></p>
 <c:if test="${count ==0 }">
 	<table class="table-bordered" width="700">
 		<tr class="w3-grey">
